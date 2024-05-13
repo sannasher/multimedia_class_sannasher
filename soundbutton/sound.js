@@ -1,0 +1,3 @@
+// sound.js
+
+playSound("soundone");

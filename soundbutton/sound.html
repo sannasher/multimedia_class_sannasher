@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sound Machine</title>
+    <style>
+      #soundMachine {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        position: relative; /* Required for positioning the image */
+      }
+      #soundMachine img {
+        max-width: 100%; /* Ensure the image fits within its container */
+        height: auto;
+        position: relative; /* Required for positioning clickable areas relative to the image */
+      }
+      .clickable-area {
+        position: absolute;
+        cursor: pointer;
+        border-radius: 50%; /* Make the areas circular */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="soundMachine">
+      <h1>Sound Machine - Click the Five Buttons!</h1>
+      <div style="position: relative">
+        <!-- Container for the image and clickable areas -->
+        <img
+          src="https://img.freepik.com/free-photo/view-vintage-radio-device-nutshell-tones_23-2151208110.jpg?t=st=1715630060~exp=1715633660~hmac=d611bb6e539da1875959a1a784260ec3a323c5e28d3bc59bab8e42fe9a403243&amp;w=1800"
+          alt="Sound Machine Image"
+        />
+        <!-- Define clickable areas with original coordinates -->
+        <div
+          class="clickable-area"
+          style="top: 64.5%; left: 38%; width: 4%; height: 6%"
+          onclick="playSound('soundone')"
+          title="soundone"
+        ></div>
+        <div
+          class="clickable-area"
+          style="top: 64.5%; left: 43%; width: 4%; height: 6%"
+          onclick="playSound('soundtwo')"
+          title="soundtwo"
+        ></div>
+        <div
+          class="clickable-area"
+          style="top: 64.5%; left: 48%; width: 4%; height: 6%"
+          onclick="playSound('soundthree')"
+          title="soundthree"
+        ></div>
+        <div
+          class="clickable-area"
+          style="top: 64.5%; left: 53%; width: 4%; height: 6%"
+          onclick="playSound('soundfour')"
+          title="soundfour"
+        ></div>
+        <div
+          class="clickable-area"
+          style="top: 64.5%; left: 58%; width: 4%; height: 6%"
+          onclick="playSound('soundfive')"
+          title="soundfive"
+        ></div>
+      </div>
+    </div>
+
+    <!-- Audio elements for sound effects -->
+    <audio id="soundone">
+      <source src="soundone.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="soundtwo">
+      <source src="soundtwo.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="soundthree">
+      <source src="soundthree.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="soundfour">
+      <source src="soundfour.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="soundfive">
+      <source src="soundfive.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      function playSound(soundId) {
+        var sound = document.getElementById(soundId);
+        sound.play();
+      }
+    </script>
+
+    <p><a href="../index.html">Portfolio Page</a></p>
+  </body>
+</html>
