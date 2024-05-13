@@ -1,15 +1,13 @@
 //animation.js
 
-// Get the canvas element
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-// Define animation variables
-var characterX = 0; // Initial x-coordinate of the character
-var characterY = canvas.height * 0.5; // Initial y-coordinate of the character
-var characterSpeed = 2; // Speed at which the character moves horizontally
+var characterX = 0; // starting x-coordinate of the character
+var characterY = canvas.height * 0.5; 
+var characterSpeed = 2; // Speed of character
 
-// Define a function to draw the cartoon character and dialogue box
+//  draw the cartoon character and dialogue 
 function drawCharacter() {
   // Clear the canvas
   ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -86,17 +84,17 @@ function animate() {
   // Update character position for animation
   characterX += characterSpeed;
 
-  // Check if the character goes beyond the canvas width, reset its position
+  // Check if the character goes beyon canvas, reset
   if (characterX > canvas.width) {
-    characterX = -50; // Move the character to the left side when it reaches the right side
+    characterX = -50; // Move the character to left when reaches the right side
   }
 
-  // Draw the scene with the updated character position and dialogue box
+  // Draw  with the updated characte
   drawCharacter();
 
-  // Request the next animation frame
+  // next animation frame
   requestAnimationFrame(animate);
 }
 
-// Start the animation
+// Start 
 animate();

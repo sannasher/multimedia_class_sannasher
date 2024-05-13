@@ -2,7 +2,7 @@ function convertToFahrenheit() {
   let celsiusInput = document.getElementById("celsius").value;
   if (celsiusInput === "" || isNaN(celsiusInput)) {
     document.getElementById("results").innerText =
-      "Please enter a valid temperature in Celsius.";
+      "Please enter a valid tempin Celsius.";
     return;
   }
   let celsius = parseFloat(celsiusInput);
@@ -16,7 +16,7 @@ function convertToCelsius() {
   let fahrenheitInput = document.getElementById("fahrenheit").value;
   if (fahrenheitInput === "" || isNaN(fahrenheitInput)) {
     document.getElementById("results").innerText =
-      "Please enter a valid temperature in Fahrenheit.";
+      "Please enter a valid temp in Fahrenheit.";
     return;
   }
   let fahrenheit = parseFloat(fahrenheitInput);

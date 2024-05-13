@@ -1,32 +1,36 @@
-// Define a function to draw the chart
 function drawChart() {
   var fruits = [
-    { name: "Apple", quantity: 20, color: "red" },
-    { name: "Orange", quantity: 10, color: "orange" },
-    { name: "Banana", quantity: 15, color: "yellow" },
-    { name: "Kiwi", quantity: 5, color: "green" },
-    { name: "Blueberry", quantity: 5, color: "blue" },
-    { name: "Grapes", quantity: 10, color: "purple" },
+    { name: "Apple", quantity: 40, color: "red" },
+    { name: "Orange", quantity: 68, color: "orange" },
+    { name: "Banana", quantity: 50, color: "yellow" },
+    { name: "Kiwi", quantity: 20, color: "green" },
+    { name: "Blueberry", quantity: 25, color: "blue" },
+    { name: "Grapes", quantity: 30, color: "purple" },
   ];
 
   var canvas = document.getElementById("myCanvas");
   var ctx = canvas.getContext("2d");
 
-  // Increase size of bars and padding
   var barHeight = 50; // Height of each bar
   var padding = 20; // Padding between bars
+  var maxWidth = 400; // Maximum width for a bar
+
+  // Find the maximum quantity
+  var maxQuantity = Math.max(...fruits.map((fruit) => fruit.quantity));
 
   // Loop through each fruit and draw a bar
   for (var i = 0; i < fruits.length; i++) {
     var fruit = fruits[i];
-    var x = 0; // Starting x-coordinate of the bar
-    var y = i * (barHeight + padding); // Starting y-coordinate of the bar
+    var x = 0;
+    var y = i * (barHeight + padding); // Starting y-coordinate
 
-    // Draw the bar (increasing width of the bars as well)
+    // Calculate the width of the bar based on quantity
+    var barWidth = (fruit.quantity / maxQuantity) * maxWidth;
+
+    // Draw the bar
     ctx.fillStyle = fruit.color;
-    ctx.fillRect(x, y, fruit.quantity * 20, barHeight);
+    ctx.fillRect(x, y, barWidth, barHeight);
 
-    // Decrease font size and adjust position of fruit name
     ctx.font = "16px Arial";
     ctx.fillStyle = "black";
     ctx.fillText(
@@ -37,7 +41,6 @@ function drawChart() {
   }
 }
 
-// Call the drawChart function after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
   drawChart();
 });
