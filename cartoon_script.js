@@ -1,3 +1,6 @@
+//MULTIMEDIA_CLASS/multimedia_class_sannasher/cartoon_script.js
+
+
 // Get the canvas element
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
