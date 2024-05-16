@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Population Doughnut Chart</title>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div style="width: 50%; margin: auto;">
+    <!-- Button to show doughnut chart -->
+    <button onclick="showDoughnutChart()">Show Doughnut Chart</button>
+    <!-- Doughnut Chart -->
+    <canvas id="doughnutChart" style="display: none;"></canvas>
+  </div>
+
+  <script>
+    // Dataset
+    const dataset = {
+      countries: ["China", "India", "United States", "Indonesia", "Pakistan", "Brazil", "Nigeria", "Bangladesh", "Russia", "Mexico"],
+      populations: [1444216107, 1393409038, 332915073, 276361783, 225199937, 213993437, 211400708, 166303498, 145912025, 130262216]
+    };
+
+    // Function to show doughnut chart
+    function showDoughnutChart() {
+      document.querySelector('button').style.display = 'none';
+      var doughnutCanvas = document.getElementById('doughnutChart');
+      doughnutCanvas.style.display = 'block';
+
+      // Doughnut Chart
+      var doughnutCtx = doughnutCanvas.getContext('2d');
+      var doughnutChart = new Chart(doughnutCtx, {
+        type: 'doughnut',
+        data: {
+          labels: dataset.countries,
+          datasets: [{
+            label: 'Population - Sanna Sher',
+            data: dataset.populations,
+            backgroundColor: [
+  'rgba(255, 0, 0, 0.5)',          // Red
+  'rgba(0, 0, 255, 0.5)',          // Blue
+  'rgba(255, 255, 0, 0.5)',        // Yellow
+  'rgba(0, 255, 255, 0.5)',        // Cyan
+  'rgba(128, 0, 128, 0.5)',        // Purple
+  'rgba(255, 140, 0, 0.5)',        // DarkOrange
+  'rgba(255, 255, 224, 0.5)',      // LightYellow
+  'rgba(0, 0, 255, 0.5)',          // Blue
+  'rgba(192, 192, 192, 0.5)',      // Silver
+  'rgba(0, 255, 255, 0.5)'         // Cyan
+],
+borderColor: [
+  'rgba(255, 0, 0, 1)',            // Red
+  'rgba(0, 0, 255, 1)',            // Blue
+  'rgba(255, 255, 0, 1)',          // Yellow
+  'rgba(0, 255, 255, 1)',          // Cyan
+  'rgba(128, 0, 128, 1)',          // Purple
+  'rgba(255, 140, 0, 1)',          // DarkOrange
+  'rgba(255, 255, 224, 1)',        // LightYellow
+  'rgba(0, 0, 255, 1)',            // Blue
+  'rgba(192, 192, 192, 1)',        // Silver
+  'rgba(0, 255, 255, 1)'           // Cyan
+]
+,
+            borderWidth: 1
+          }]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Population of Top 10 Countries (Doughnut Chart) - Sanna Sher'
+          }
+        }
+      });
+    }
+  </script>
+</body>
+</html>

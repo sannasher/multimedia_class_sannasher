@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Resume</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="resume.css" />
+  </head>
+  <body>
+
+    
+    <!-- Navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="resume.html">Resume</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="../index.html">MultiMediaPortfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="https://sannasher.github.io/incc-client/"
+              >MyCommunityCenterSite</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main content -->
+    <div class="container mt-5">
+      <h1 class="text-center mb-4">Spongebob Squarepants</h1>
+      <!-- Accordion for resume categories -->
+      <div id="accordion">
+        <!-- Summary section -->
+
+
+        
+        <div class="card">
+          <div class="card-header" id="summaryHeading">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#summaryContent"
+                aria-expanded="true"
+                aria-controls="summaryContent"
+              >
+                Summary
+              </button>
+            </h5>
+          </div>
+          <div
+            id="summaryContent"
+            class="collapse show"
+            aria-labelledby="summaryHeading"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              SpongeBob SquarePants is a hardworking sponge who lives in a
+              pineapple under the sea. He's got a great attitude and loves to
+              help.
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Education section -->
+        <div class="card">
+          <div class="card-header" id="educationHeading">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#educationContent"
+                aria-expanded="true"
+                aria-controls="educationContent"
+              >
+                Education
+              </button>
+            </h5>
+          </div>
+          <div
+            id="educationContent"
+            class="collapse"
+            aria-labelledby="educationHeading"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              - Mrs. Puff's Boating School, Bikini Bottom
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Experience section -->
+        <div class="card">
+          <div class="card-header" id="experienceHeading">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#experienceContent"
+                aria-expanded="true"
+                aria-controls="experienceContent"
+              >
+                Experience
+              </button>
+            </h5>
+          </div>
+          <div
+            id="experienceContent"
+            class="collapse"
+            aria-labelledby="experienceHeading"
+            data-parent="#accordion"
+          >
+            <div class="card-body">- Fry Cook - Krusty Krab</div>
+          </div>
+        </div>
+
+
+        <!-- Skills section -->
+        <div class="card">
+          <div class="card-header" id="skillsHeading">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#skillsContent"
+                aria-expanded="true"
+                aria-controls="skillsContent"
+              >
+                Skills
+              </button>
+            </h5>
+          </div>
+          <div
+            id="skillsContent"
+            class="collapse"
+            aria-labelledby="skillsHeading"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              - Cooking
+              <br />
+              - Jellyfishing
+              <br />
+              - Smiling
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Portfolio section -->
+        <div class="card">
+          <div class="card-header" id="portfolioHeading">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#portfolioContent"
+                aria-expanded="true"
+                aria-controls="portfolioContent"
+              >
+                Portfolio
+              </button>
+            </h5>
+          </div>
+          <div
+            id="portfolioContent"
+            class="collapse"
+            aria-labelledby="portfolioHeading"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              He made this site! 
+              SONG
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="card">
+          <div class="card-header" id="activitiesHeading">
+            <h5 class="mb-0">
+              <button
+                class="btn btn-link"
+                data-toggle="collapse"
+                data-target="#activitiesContent"
+                aria-expanded="true"
+                aria-controls="activitiesContent"
+              >
+                Awards
+              </button>
+            </h5>
+          </div>
+          <div
+            id="activitiesContent"
+            class="collapse"
+            aria-labelledby="activitiesHeading"
+            data-parent="#accordion"
+          >
+            <div class="card-body">
+              - Jellyfish Catcher Champion 2024
+              <br />
+              - Eternal Employee of the Month - Krusty Krab
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

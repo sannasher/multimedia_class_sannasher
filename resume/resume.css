@@ -1,0 +1,7 @@
+body {
+  background-image: url("https://img.freepik.com/free-vector/hand-drawn-flat-design-sea-landscape_23-2149320278.jpg?t=st=1715818288~exp=1715821888~hmac=b720e1f87866569f3995fce3c5a8b2ba53d83840f505f66fe1e282dcfc11b3bb&w=2000");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.9; /* Adjust opacity for transparency */
+}
